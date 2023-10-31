@@ -1,0 +1,19 @@
+---
+tap_install:
+  values:
+    profile: run
+    ceip_policy_disclosed: TRUE
+    excluded_packages:
+      - amr-observer.apps.tanzu.vmware.com
+    
+    supply_chain: basic
+    
+    contour:
+      envoy:
+        service:
+          type: LoadBalancer
+    appliveview_connector:
+      backend:
+        sslDeactivated: TRUE
+        ingressEnabled: true
+        host: appliveview.tap.auto-aks-naxgrmdzvo-1.tapdemo.vmware.com
